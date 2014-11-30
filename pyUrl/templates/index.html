@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Deshraj About Me</title>
+		<title>pyUrl Shortner</title>
 		<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 		<!-- static-font -->
@@ -17,6 +17,8 @@
 		<!-- start-smoth-scrolling -->
 		<script type="text/javascript" src="static/js/move-top.js"></script>
 		<script type="text/javascript" src="static/js/easing.js"></script>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
@@ -34,11 +36,11 @@
 				<!-- container -->
 				<div class="container">
 					<div class="header-logo">
-						<a href="#"><img src="static/images/logo.png" alt="" /></a>
+						<a href="#"><h2 style="font:Verdana">PyUrl Shortner</h2></a>
 					</div>
 					<div class="top-nav">
 						<span class="menu">MENU</span>
-						<ul class="nav1">
+						<!-- <ul class="nav1">
 							<li><a href="#home" class="scroll">Home</a></li>                                                  
 							<li><a href="#services" class="scroll">Services</a></li>  
 							<li><a href="#about" class="scroll">About</a></li>  
@@ -46,7 +48,7 @@
 							<li><a href="#blog" class="scroll">Blog</a></li> 
 							<li><a href="#testimonials" class="scroll">Testimonials</a></li>
 							<li><a href="mailto:info@example.com"><img src="static/images/msg.png" alt="" /></a></li>  
-						</ul>
+						</ul> -->
 						<!-- script-for-menu -->
 							 <script>
 							   $( "span.menu" ).click(function() {
@@ -61,155 +63,14 @@
 				</div>
 				<!-- //container -->
 			</div>
-			<div class="container">
-			<!-- banner Slider starts Here -->
-					<script src="static/js/responsiveslides.min.js"></script>
-					 <script>
-						// You can also use "$(window).load(function() {"
-						$(function () {
-						  // Slideshow 4
-						  $("#slider3").responsiveSlides({
-							auto: true,
-							pager: false,
-							nav: true,
-							speed: 500,
-							namespace: "callbacks",
-							before: function () {
-							  $('.events').append("<li>before event fired.</li>");
-							},
-							after: function () {
-							  $('.events').append("<li>after event fired.</li>");
-							}
-						  });
-					
-						});
-					  </script>
-					<!--//End-slider-script -->
-					<div  id="top" class="callbacks_container">
-						<ul class="rslides" id="slider3">
-							<li>
-								<div class="head-info">
-									<h1>Creative Agency <span>For Your Design Needs</span></h1>
-									<p>static Development - IOS Developer - Internet Marketer - Your Freelance</p>
-									<button class="button btn-1 btn-1e">Read More </button>
-								</div>
-							</li>
-							<li>
-								<div class="head-info">
-									<h1>Develope Premium  <span>For Your Business Needs</span></h1>
-									<p>static Development - IOS Developer - Internet Marketer - Your Freelance</p>
-									<button class="button btn-1 btn-1e">Read More </button>
-								</div>
-							</li>
-							<li>
-								<div class="head-info">
-									<h1>People Behind <span>To deliver quality output</span></h1>
-									<p>static Development - IOS Developer - Internet Marketer - Your Freelance</p>
-									<button class="button btn-1 btn-1e">Read More</button>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-		</div>
-		<!-- //header -->
-		<!-- agency -->
-		<div id="about" class="agency">
-			<div class="agency-left">
-				<h2>i<span>Freelancer</span> Agency</h2>
-				<h4>We Develope <span>Premium</span> & Mobile 
-					<span>Responsive</span> staticsite template for any type of Pusiness!
-				</h4>
-				<p>Nulla sit amet mi sed metus venenatis commodo vitae vel magna. Aenean auctor, dolor dignissim congue. Nulla sit amet mi sed metus venenatis commodo vitae vel magna. Aenean auctor, dolor dignissim congue Nulla sit amet mi sed metus venenatis commodo vitae vel magna. Aenean auctor, dolor dignissim congue. </p>
-				<p> Aenean auctor, dolor dignissim congue. Nulla sit amet mi sed metus venenatis commodo vitae vel magna.</p>
-				<button class="button-red">More About Us </button>
-			</div>
-			<div class="agency-right">
-				<img src="static/images/device.png" alt="" />
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<!-- //agency -->
-		<!-- services -->
-	
-		<div class="services-bottom">
-			<script>
-				// You can also use "$(window).load(function() {"
-				$(function () {
-				  // Slideshow 4
-				  $("#slider4").responsiveSlides({
-					auto: true,
-					pager: true,
-					nav: false,
-					speed: 500,
-					namespace: "callbacks",
-					before: function () {
-						 $('.events').append("<li>before event fired.</li>");
-					},
-					after: function () {
-							$('.events').append("<li>after event fired.</li>");
-					}
-				 });
-					
-				});
-			</script>
-			<div  id="top" class="callbacks_container">
-				<ul class="rslides" id="slider4">
-					<li>
-						<div class="services-bottom-text">
-							<h3>"People Behind <span>iFreelancer</span> are advanced art enthusiasts, 
-							cleaver in shaping and type of design you need."</h3>
-							<div class="sub-text">
-								<span class="line"></span>
-								<span class="line-anchor">OUR VISION</span>
-								<span class="line"></span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="services-bottom-text another">
-							<h3>"To deliver <span>quality output</span> - 
-								<label>unique, affordable and professional"</label></h3>
-							<div class="sub-text">
-								<span class="line"></span>
-								<span class="line-anchor">OUR VISION</span>
-								<span class="line"></span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="services-bottom-text">
-							<h3>"People Behind <span>iFreelancer</span> are advanced art enthusiasts, 
-							cleaver in shaping and type of design you need."</h3>
-							<div class="sub-text">
-								<span class="line"></span>
-								<span class="line-anchor">OUR VISION</span>
-								<span class="line"></span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="services-bottom-text another">
-							<h3>"To deliver <span>quality output</span> - 
-								<label>unique, affordable and professional"</label></h3>
-							<div class="sub-text">
-								<span class="line"></span>
-								<span class="line-anchor">OUR VISION</span>
-								<span class="line"></span>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- //services-bottom -->
-		<!-- work -->
+			
+		
 		<div id="portfolio" class="work">
 			<!-- container -->
 			<div class="container">
 				<div class="work-info">
-					<h3>Recent <span>Works</span></h3>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+					<h3> Unleash the<span> power of the link</span> </h3>
+					<p>Offers URL redirection service with real-time link tracking.</p>
 				</div>
 				<script>
 					// You can also use "$(window).load(function() {"
@@ -231,79 +92,29 @@
 						
 					});
 				</script>
-				<div  id="top" class="callbacks_container">
-					<ul class="rslides" id="slider2">
-						<li>
-							<div class="work-info-grids">
-								<div class="work-info-grid">
-									<img src="static/images/food.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="work-info-grid">
-									<img src="static/images/card.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="work-info-grid">
-									<img src="static/images/phone.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</li>
-						<li>
-							<div class="work-info-grids">
-								<div class="work-info-grid">
-									<img src="static/images/card.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="work-info-grid">
-									<img src="static/images/phone.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="work-info-grid">
-									<img src="static/images/food.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</li>
-						<li>
-							<div class="work-info-grids">
-								<div class="work-info-grid">
-									<img src="static/images/phone.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="work-info-grid">
-									<img src="static/images/food.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="work-info-grid">
-									<img src="static/images/card.jpg" alt="" />
-									<div class="caption">
-										<span> </span>
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</li>
-					</ul>
-				</div>
+			<form class="form-horizontal" action = "" method = "POST">
+ 				{% csrf_token %}
+				<fieldset>
+
+						<div class="form-group">
+						  <label class="col-md-4 control-label" for="url">Enter the url</label>  
+						  <div class="col-md-5">
+						  <input id="url" name="url" type="text" placeholder="http://www.google.com" class="form-control input-md" name= "url" required="">
+						    
+						  </div>
+						</div>
+
+				<!-- Button -->
+						<div class="form-group">
+						  <label class="col-md-4 control-label" for="submitButton"></label>
+						  <div class="col-md-4">
+						    <button id="submitButton" type = "submit" name="submitButton" class="btn btn-primary">Shorten</button>
+						  </div>
+						</div>
+
+				</fieldset>
+			</form>
+
 				<button class="button-red view">View More </button>
 			</div>
 			<!-- //container -->

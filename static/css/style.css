@@ -18,7 +18,7 @@ html,body {
 	position: relative;
 }
 .header{
-	background:#FFF;
+	background:#F8670B;
 	padding: 1em 0;
 }
 .header-logo{
@@ -38,7 +38,7 @@ html,body {
 .top-nav li a{
 	font-size: 16px;
 	font-weight: 700;
-	color: #6E6E6E;
+	color: #FFF;
 	text-decoration: none;
 	text-transform: uppercase;
 }
