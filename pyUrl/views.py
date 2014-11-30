@@ -25,7 +25,7 @@ def home(request):
 		shortUrl = str(random1)
 		print shortUrl
 		urldata(url = url,shortUrl = shortUrl).save()
-		return render_to_response("shorten.html",{"shortUrl" : shortUrl},
+		return render_to_response("shorten.html",{"shortUrl" : "http://pyUrl.com/"+str(shortUrl)},
                            context_instance=RequestContext(request))
 		# return render_to_response("index.html",{'shortUrl':1},c)
 	# request.session.set_test_cookie()

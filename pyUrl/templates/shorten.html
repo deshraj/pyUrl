@@ -72,75 +72,26 @@
 					<h3> Unleash the<span> power of the link</span> </h3>
 					<p>Offers URL redirection service with real-time link tracking.</p>
 				</div>
-			{% url 'home' as home_url %}
-				{{ home_url }}
 				{% if shortUrl %}
-						  <h3>Congrats for the new shortened Url</h3><br/>
-						  <div class="col-md-5">
-						  <input id="url" name="url" type="text" class="form-control input-md" name= "url"  value="{{ shortUrl }}">						    
-						  <button id="button"  name="button" class="btn btn-primary" onclick="func()">Copy</button>
+						  <h3>New shortened url for your original link </h3><br/>
+						  <div class="">
+						  <input id="url" name="url" type="text" class="input-md" name= "url"  value="{{ shortUrl }}">						    
+					<!-- 	  <button id="button"  name="button" class="btn btn-primary" onclick="func()">Copy</button> -->
 
 						  </div>
 					<br>
 					{% endif %}
-				<script type="text/javascript">
-					function func(){
-						  var a = document.getElementById("button").value;
-						  alert(a);
-						  // var holdtext = url.innerText;
-						  Copied = a.createTextRange();
-						  Copied.execCommand("Copy");
-						}
-				</script>
+				
 			</div>
-			<!-- //container -->
 		</div>
-		<!-- //work -->
-		<!-- blog -->
 		
 		<div class="address">
 			<div class="container">
 				<ul>
-					<li><span>LOCATION</span>:JSS ATE Noida Sector-62</li>
-					<li class="p-number"><span>PHONE</span>: +919555344456</li>
-					<li><span>EMAIL</span>:<a href="mailto:deshrajdry@gmail.com">deshrajdry@gmail.com</a></li>
+					<li><span>Developed By: </span>:<a href="http://www.deshraj.in">Deshraj Yadav</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="footer-top">
-				<div class="icons">
-					<ul>
-						<li><a href="#" class="facebook"> </a></li>
-						<li><a href="#" class="instagram"> </a></li>
-						<li><a href="#" class="behance"> </a></li>
-						<li><a href="#" class="chrome"> </a></li>
-						<li><a href="#" class="twitter"> </a></li>
-						<li><a href="#" class="dribble"> </a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- //footer-top -->
-			
-			<!-- //footer-bottom -->
-		</div>
-		<!-- //footer -->
-		<script type="text/javascript">
-									$(document).ready(function() {
-										/*
-										var defaults = {
-								  			containerID: 'toTop', // fading element id
-											containerHoverID: 'toTopHover', // fading element hover id
-											scrollSpeed: 1200,
-											easingType: 'linear' 
-								 		};
-										*/
-										
-										$().UItoTop({ easingType: 'easeOutQuart' });
-										
-									});
-								</script>
-									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	<!-- content-Get-in-touch -->
+		
 	</body>
 </html>

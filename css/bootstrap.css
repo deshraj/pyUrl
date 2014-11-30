@@ -447,6 +447,8 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
+  font-family: initial;
+  color:#FFF;
 }
 h3,
 .h3 {

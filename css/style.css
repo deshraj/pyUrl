@@ -11,14 +11,9 @@ html,body {
 	font-size:100%;
 }
 /*-- header --*/
-.head-bg{
-	background:url(../images/bg.jpg) no-repeat 0px 0px;
-	background-size: cover;
-	min-height: 700px;
-	position: relative;
-}
+
 .header{
-	background:#FFF;
+	background:#F8670B;
 	padding: 1em 0;
 }
 .header-logo{
@@ -38,7 +33,7 @@ html,body {
 .top-nav li a{
 	font-size: 16px;
 	font-weight: 700;
-	color: #6E6E6E;
+	color: #FFF;
 	text-decoration: none;
 	text-transform: uppercase;
 }

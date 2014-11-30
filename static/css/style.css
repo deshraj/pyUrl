@@ -1,24 +1,13 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-/*-- header --*/
+
 html,body {
 	font-family: 'Raleway', sans-serif;
 	background:#FFF;
 	font-size:100%;
 }
 /*-- header --*/
-.head-bg{
-	background:url(../images/bg.jpg) no-repeat 0px 0px;
-	background-size: cover;
-	min-height: 700px;
-	position: relative;
-}
+
 .header{
-	background:#F8670B;
+	background:#E74C3C;
 	padding: 1em 0;
 }
 .header-logo{
@@ -720,6 +709,9 @@ span.line-anchor {
 .address{
 	background:#E74C3C;
 	padding: 2em 0;
+	bottom:0;
+	position: absolute;
+	width: 100%;
 }
 .address ul{
 	padding:0;
@@ -736,13 +728,7 @@ span.line-anchor {
 .address ul li a:hover{
 	text-decoration:none;
 }
-.address ul li span{
-	font-size:18px;
-	font-weight:600;
-}
-.address ul li.p-number{
-	margin: 0 6.4em;
-}
+
 /*-- description --*/
 .description{
 	padding: 6em 0;
