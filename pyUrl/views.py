@@ -22,7 +22,7 @@ def home(request):
 		c.update(csrf(request))
 		url = request.POST['url']
 		random1=''.join([random.choice(string.letters + string.digits) for i in range(5)])
-		shortUrl = "http://pyUrl.com/"+str(random1)
+		shortUrl = str(random1)
 		print shortUrl
 		urldata(url = url,shortUrl = shortUrl).save()
 		return render_to_response("shorten.html",{"shortUrl" : shortUrl},
@@ -46,11 +46,7 @@ def open(request,url=None):
 	# print url
 	if request.path=='/':
 		return home(request)
-	# print request.path
-
-	# now query the db for searching the link 
-	# return the corresponding link to the given value 
-	out = urldata.objects.get(shortUrl="http://pyUrl.com"+str(request.path))
+	out = urldata.objects.get(shortUrl=str(request.path))
 	urlOut = out.url
 	print urlOut
-	return HttpResponse(urlOut)
+	return HttpResponseRedirect(urlOut)

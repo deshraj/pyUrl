@@ -72,26 +72,7 @@
 					<h3> Unleash the<span> power of the link</span> </h3>
 					<p>Offers URL redirection service with real-time link tracking.</p>
 				</div>
-				<script>
-					// You can also use "$(window).load(function() {"
-					$(function () {
-					  // Slideshow 4
-					  $("#slider2").responsiveSlides({
-						auto: true,
-						pager: false,
-						nav: true,
-						speed: 500,
-						namespace: "callbacks",
-						before: function () {
-							 $('.events').append("<li>before event fired.</li>");
-						},
-						after: function () {
-								$('.events').append("<li>after event fired.</li>");
-						}
-					 });
-						
-					});
-				</script>
+				
 			<form class="form-horizontal" action = "" method = "POST">
  				{% csrf_token %}
 				<fieldset>
@@ -104,7 +85,6 @@
 						  </div>
 						</div>
 
-				<!-- Button -->
 						<div class="form-group">
 						  <label class="col-md-4 control-label" for="submitButton"></label>
 						  <div class="col-md-4">
@@ -114,57 +94,15 @@
 
 				</fieldset>
 			</form>
-
-				<button class="button-red view">View More </button>
 			</div>
-			<!-- //container -->
 		</div>
-		<!-- //work -->
-		<!-- blog -->
-		
+
 		<div class="address">
 			<div class="container">
 				<ul>
-					<li><span>LOCATION</span>:JSS ATE Noida Sector-62</li>
-					<li class="p-number"><span>PHONE</span>: +919555344456</li>
-					<li><span>EMAIL</span>:<a href="mailto:deshrajdry@gmail.com">deshrajdry@gmail.com</a></li>
+					<li><span>Developed By: </span>:<a href="http://www.deshraj.in">Deshraj Yadav</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="footer-top">
-				<div class="icons">
-					<ul>
-						<li><a href="#" class="facebook"> </a></li>
-						<li><a href="#" class="instagram"> </a></li>
-						<li><a href="#" class="behance"> </a></li>
-						<li><a href="#" class="chrome"> </a></li>
-						<li><a href="#" class="twitter"> </a></li>
-						<li><a href="#" class="dribble"> </a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- //footer-top -->
-			
-			<!-- //footer-bottom -->
-		</div>
-		<!-- //footer -->
-		<script type="text/javascript">
-									$(document).ready(function() {
-										/*
-										var defaults = {
-								  			containerID: 'toTop', // fading element id
-											containerHoverID: 'toTopHover', // fading element hover id
-											scrollSpeed: 1200,
-											easingType: 'linear' 
-								 		};
-										*/
-										
-										$().UItoTop({ easingType: 'easeOutQuart' });
-										
-									});
-								</script>
-									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	<!-- content-Get-in-touch -->
 	</body>
 </html>
