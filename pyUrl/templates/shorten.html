@@ -5,16 +5,11 @@
 		<title>pyUrl Shortner</title>
 		<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-		<!-- static-font -->
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-		<!-- static-font -->
-		<!-- js -->
 		<script src="static/js/jquery.min.js"></script>
 		<script src="static/js/modernizr.custom.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<!-- js -->
-		<!-- start-smoth-scrolling -->
 		<script type="text/javascript" src="static/js/move-top.js"></script>
 		<script type="text/javascript" src="static/js/easing.js"></script>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
@@ -27,46 +22,29 @@
 				});
 			});
 		</script>
-		<!-- start-smoth-scrolling -->
 	</head>
 	<body>
-		<!-- header -->
 		<div id="home" class="head-bg">
 			<div class="header">
-				<!-- container -->
 				<div class="container">
 					<div class="header-logo">
 						<a href="#"><h2 style="font:Verdana">PyUrl Shortner</h2></a>
 					</div>
 					<div class="top-nav">
 						<span class="menu">MENU</span>
-						<!-- <ul class="nav1">
-							<li><a href="#home" class="scroll">Home</a></li>                                                  
-							<li><a href="#services" class="scroll">Services</a></li>  
-							<li><a href="#about" class="scroll">About</a></li>  
-							<li><a href="#portfolio" class="scroll">Portfolio</a></li>  
-							<li><a href="#blog" class="scroll">Blog</a></li> 
-							<li><a href="#testimonials" class="scroll">Testimonials</a></li>
-							<li><a href="mailto:info@example.com"><img src="static/images/msg.png" alt="" /></a></li>  
-						</ul> -->
-						<!-- script-for-menu -->
 							 <script>
 							   $( "span.menu" ).click(function() {
 								 $( "ul.nav1" ).slideToggle( 300, function() {
-								 // Animation complete.
 								  });
 								 });
 							</script>
-						<!-- /script-for-menu -->
 					</div>
 					<div class="clearfix"> </div>
 				</div>
-				<!-- //container -->
 			</div>
 			
 		
 		<div id="portfolio" class="work">
-			<!-- container -->
 			<div class="container">
 				<div class="work-info">
 					<h3> Unleash the<span> power of the link</span> </h3>
@@ -75,7 +53,7 @@
 				{% if shortUrl %}
 						  <h3>New shortened url for your original link </h3><br/>
 						  <div class="">
-						  <input id="url" name="url" type="text" class="input-md" name= "url"  value="{{ shortUrl }}">						    
+						  <input id="url" name="url" type="text" class="input-md" size="50" name= "url"  value="{{ shortUrl }}" >						    
 					<!-- 	  <button id="button"  name="button" class="btn btn-primary" onclick="func()">Copy</button> -->
 
 						  </div>
