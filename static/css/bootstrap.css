@@ -269,7 +269,7 @@ th {
 }
 html {
   font-size: 62.5%;
-
+  background: #f7f7f7;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
@@ -447,7 +447,7 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
-  font-family: initial;
+  font-family: inherit;
   color:#FFF;
 }
 h3,

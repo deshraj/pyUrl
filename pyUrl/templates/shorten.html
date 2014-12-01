@@ -52,10 +52,12 @@
 				</div>
 				{% if shortUrl %}
 						  <h3>New shortened url for your original link </h3><br/>
-						  <div class="">
-						  <input id="url" name="url" type="text" class="input-md" size="50" name= "url"  value="{{ shortUrl }}" >						    
+						  						  <div class="col-md-4"></div>
+						  <div class="col-md-4">
+						  <center>
+						  <input id="url" name="url" type="text" class="form-control input-md" size="50" name= "url"   value="{{ shortUrl }}" >						    
 					<!-- 	  <button id="button"  name="button" class="btn btn-primary" onclick="func()">Copy</button> -->
-
+							</center>
 						  </div>
 					<br>
 					{% endif %}

@@ -1492,7 +1492,7 @@ span.menu {
 		padding: 1em 0;
 	}
 	.work-info h3 {
-		background: url(../images/hr.png) no-repeat 128px 31px;
+		background: none;
 	}
 	.work-info p {
 		margin: 0.5em 0 1em 0;
