@@ -31,7 +31,7 @@ def home(request):
 	# request.session.set_test_cookie()
 	# if request.session.test_cookie_worked():
 	# 	print 'hello'
-	#custId=''.join([random.choice(string.letters + string.digits) for i in range(10)])
+	#geo=''.join([random.choice(string.letters + string.digits) for i in range(10)])
 	return render_to_response("index.html",c)
 
 # def shorten(request):
@@ -46,7 +46,13 @@ def open(request,url=None):
 	# print url
 	if request.path=='/':
 		return home(request)
-	out = urldata.objects.get(shortUrl=str(request.path))
-	urlOut = out.url
-	print urlOut
-	return HttpResponseRedirect(urlOut)
+	print "check below one "
+	print request.path
+	print "just above one "
+	try:
+		out = urldata.objects.get(shortUrl=str(request.path)[1:])
+		urlOut = str(out.url)
+		print urlOut
+		return HttpResponseRedirect(urlOut)
+	except:
+		return HttpResponse('<h1>The give url link is invalid</h1>')
