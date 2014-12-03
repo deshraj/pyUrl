@@ -51,13 +51,14 @@ def open(request,url=None):
 	# print url
 	if request.path=='/':
 		return home(request)
-	print "check below one "
-	print request.path
-	print "just above one "
+	# print "check below one "
+	# print request.path
+	# print "just above one "
 	try:
 		out = urldata.objects.get(shortUrl=str(request.path)[1:])
 		urlOut = str(out.url)
 		print urlOut
+		print "hola"
 		return HttpResponseRedirect(urlOut)
 	except:
 		return HttpResponse('<h1>The give url link is invalid</h1>')
