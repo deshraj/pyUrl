@@ -21,9 +21,14 @@ def home(request):
 		c = {}
 		c.update(csrf(request))
 		url = request.POST['url']
-		random1=''.join([random.choice(string.letters + string.digits) for i in range(5)])
-		shortUrl = str(random1)
-		print shortUrl
+		costumurl = request.POST['costumurl']
+		print costumurl
+		if not costumurl:
+			random1=''.join([random.choice(string.letters + string.digits) for i in range(5)])
+			shortUrl = str(random1)
+			print shortUrl
+		else:
+			shortUrl = costumurl
 		urldata(url = url,shortUrl = shortUrl).save()
 		return render_to_response("shorten.html",{"shortUrl" : "http://pyUrl.com/"+str(shortUrl)},
                            context_instance=RequestContext(request))
