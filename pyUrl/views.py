@@ -52,8 +52,8 @@ def home(request):
 # 	return render_to_response("shorten.html")
 def open(request,url=None):
 	# # print url
-	# if request.path=='/':
-	# 	return home(request)
+	if request.path=='/':
+		return render_to_response("index.html",context_instance=RequestContext(request))
 	# print "check below one "
 	# print request.path
 	# print "just above one "
