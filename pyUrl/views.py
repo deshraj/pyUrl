@@ -16,11 +16,7 @@ from pyUrl.models import *
 def home(request):
 	random1 = None
 	a = None
-	c = {}
-	c.update(csrf(request))
 	if request.POST:
-		c = {}
-		c.update(csrf(request))
 		url = request.POST['url']
 		costumurl = request.POST['costumurl']
 		# print costumurl
@@ -44,7 +40,7 @@ def home(request):
 	# if request.session.test_cookie_worked():
 	# 	print 'hello'
 	#geo=''.join([random.choice(string.letters + string.digits) for i in range(10)])
-	return render_to_response("index.html",c)
+	return render_to_response("index.html",context_instance=RequestContext(request))
 
 # def shorten(request):
 # 	if request.POST:
@@ -55,9 +51,9 @@ def home(request):
 # 		return render_to_response("index.html",{'shortUrl':shortUrl},context_instance=RequestContext(request))
 # 	return render_to_response("shorten.html")
 def open(request,url=None):
-	# print url
-	if request.path=='/':
-		return HttpResponseRedirect('/')
+	# # print url
+	# if request.path=='/':
+	# 	return home(request)
 	# print "check below one "
 	# print request.path
 	# print "just above one "

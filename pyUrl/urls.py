@@ -14,8 +14,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     # Examples:
+    url(r'^$', 'pyUrl.views.home', name='home'),
     url(r'(P<url>[\w.@+-,\' \'\';\'%{}\[\]]+)?$', 'pyUrl.views.open', name='open'),
-    url(r'$', 'pyUrl.views.home', name='home'),
     # url(r'shorten', 'pyUrl.views.shorten', name='shorten'),
     # url(r'^pyUrl/', include('pyUrl.foo.urls')),
 
