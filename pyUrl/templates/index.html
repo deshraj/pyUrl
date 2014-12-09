@@ -20,7 +20,7 @@
 			<div class="header">
 				<div class="container">
 					<div class="header-logo">
-						<a href="#"><h2 ><b>PyUrl Shortner</b></h2></a>
+						<a href="/"><h2 ><b>PyUrl Shortner</b></h2></a>
 					</div>
 					
 					<div class="clearfix"> </div>
@@ -52,7 +52,12 @@
 						      <span class="input-group-addon">http://pyurl.com/</span>
 						      <input id="costumurl" name="costumurl" class="form-control" placeholder="example" type="text" required="">
 						    </div>
-						    
+						    	{% if a %}
+						    	<br>
+								<div class="alert alert-danger" role="alert">
+							  	Error: This name has already been taken.
+							</div>
+							{% endif %}
 						  <label class="col-md-4 control-label" for="submitButton"></label>
 						  <div class="col-md-4">
 						  <br>

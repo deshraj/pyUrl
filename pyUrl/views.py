@@ -15,6 +15,7 @@ from pyUrl.models import *
 
 def home(request):
 	random1 = None
+	a = None
 	c = {}
 	c.update(csrf(request))
 	if request.POST:
@@ -23,14 +24,20 @@ def home(request):
 		url = request.POST['url']
 		costumurl = request.POST['costumurl']
 		print costumurl
-		if not costumurl:
-			random1=''.join([random.choice(string.letters + string.digits) for i in range(5)])
-			shortUrl = str(random1)
-			print shortUrl
+		a= urldata1.objects.filter(shortUrl__icontains = costumurl)
+		if a:
+			msg= "This url has already been taken."
+			return render_to_response("index.html",{'a':a},
+                           context_instance=RequestContext(request))
 		else:
-			shortUrl = costumurl
-		urldata(url = url,shortUrl = shortUrl).save()
-		return render_to_response("shorten.html",{"shortUrl" : "http://pyUrl.com/"+str(shortUrl)},
+			if not costumurl:
+				random1=''.join([random.choice(string.letters + string.digits) for i in range(5)])
+				shortUrl = str(random1)
+				print shortUrl
+			else:
+				shortUrl = costumurl
+			urldata1(url = url,shortUrl = shortUrl).save()
+		return render_to_response("shorten.html",{"shortUrl" : "http://pyUrl.com/"+str(shortUrl),'a':a},
                            context_instance=RequestContext(request))
 		# return render_to_response("index.html",{'shortUrl':1},c)
 	# request.session.set_test_cookie()
@@ -55,7 +62,7 @@ def open(request,url=None):
 	# print request.path
 	# print "just above one "
 	try:
-		out = urldata.objects.get(shortUrl=str(request.path)[1:])
+		out = urldata1.objects.get(shortUrl=str(request.path)[1:])
 		urlOut = str(out.url)
 		print urlOut
 		print "hola"

@@ -1,6 +1,6 @@
 from django.db import models
 
-class urldata(models.Model):
+class urldata1(models.Model):
     url = models.CharField(max_length=100000)
     shortUrl = models.CharField(max_length=100)
 

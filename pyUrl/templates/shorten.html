@@ -28,7 +28,7 @@
 			<div class="header">
 				<div class="container">
 					<div class="header-logo">
-						<a href="#"><h2 style="font:Verdana">PyUrl Shortner</h2></a>
+						<a href="/"><h2 style="font:Verdana">PyUrl Shortner</h2></a>
 					</div>
 					<div class="top-nav">
 						<span class="menu">MENU</span>
@@ -61,6 +61,13 @@
 						  </div>
 					<br>
 					{% endif %}
+	{% if a %}
+	<div class="alert alert-danger" role="alert">
+  	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+  {{ a }}
+</div>
+{% endif %}
 				
 			</div>
 		</div>
