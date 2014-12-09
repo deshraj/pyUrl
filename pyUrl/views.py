@@ -23,7 +23,7 @@ def home(request):
 		c.update(csrf(request))
 		url = request.POST['url']
 		costumurl = request.POST['costumurl']
-		print costumurl
+		# print costumurl
 		a= urldata1.objects.filter(shortUrl__icontains = costumurl)
 		if a:
 			msg= "This url has already been taken."
@@ -33,7 +33,7 @@ def home(request):
 			if not costumurl:
 				random1=''.join([random.choice(string.letters + string.digits) for i in range(5)])
 				shortUrl = str(random1)
-				print shortUrl
+				# print shortUrl
 			else:
 				shortUrl = costumurl
 			urldata1(url = url,shortUrl = shortUrl).save()
@@ -57,15 +57,13 @@ def home(request):
 def open(request,url=None):
 	# print url
 	if request.path=='/':
-		return home(request)
+		return HttpResponseRedirect('/')
 	# print "check below one "
 	# print request.path
 	# print "just above one "
 	try:
 		out = urldata1.objects.get(shortUrl=str(request.path)[1:])
 		urlOut = str(out.url)
-		print urlOut
-		print "hola"
 		return HttpResponseRedirect(urlOut)
 	except:
 		return HttpResponse('<h1>The give url link is invalid</h1>')
