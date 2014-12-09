@@ -14,6 +14,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     # Examples:
+    (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^$', 'pyUrl.views.home', name='home'),
     url(r'(P<url>[\w.@+-,\' \'\';\'%{}\[\]]+)?$', 'pyUrl.views.open', name='open'),
     # url(r'shorten', 'pyUrl.views.shorten', name='shorten'),
