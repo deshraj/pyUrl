@@ -51,15 +51,15 @@ def home(request):
 # 		return render_to_response("index.html",{'shortUrl':shortUrl},context_instance=RequestContext(request))
 # 	return render_to_response("shorten.html")
 def open(request,url=None):
-	# # print url
+	print "url sdfsafgasdeqatta"
 	if request.path=='/':
 		return render_to_response("index.html",context_instance=RequestContext(request))
 	# print "check below one "
 	# print request.path
 	# print "just above one "
-	try:
-		out = urldata1.objects.get(shortUrl=str(request.path)[1:])
-		urlOut = str(out.url)
-		return HttpResponseRedirect(urlOut)
-	except:
-		return HttpResponse('<h1>The give url link is invalid</h1>')
+# try:
+	out = urldata1.objects.get(shortUrl=str(request.path)[1:])
+	urlOut = str(out.url)
+	return HttpResponseRedirect(urlOut)
+	# except:
+	# 	return HttpResponse('<h1>The give url link is invalid</h1>')
