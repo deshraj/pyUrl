@@ -57,9 +57,9 @@ def open(request,url=None):
 	# print "check below one "
 	# print request.path
 	# print "just above one "
-# try:
-	out = urldata1.objects.get(shortUrl=str(request.path)[1:])
-	urlOut = str(out.url)
-	return HttpResponseRedirect(urlOut)
-	# except:
-	# 	return HttpResponse('<h1>The give url link is invalid</h1>')
+	try:
+		out = urldata1.objects.get(shortUrl=str(request.path)[1:])
+		urlOut = str(out.url)
+		return HttpResponseRedirect(urlOut)
+	except:
+		return HttpResponse('<h2>The give url link is invalid. Please try another.</h2>')
