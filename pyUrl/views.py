@@ -62,4 +62,4 @@ def open(request,url=None):
 		urlOut = str(out.url)
 		return HttpResponseRedirect(urlOut)
 	except:
-		return HttpResponse('<h2>The give url link is invalid. Please try another.</h2>')
+		return HttpResponse('<h2>The given url link is invalid. Please try another.</h2>')
